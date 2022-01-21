@@ -16,7 +16,7 @@ function App() {
     <>
       {/* <Navbar /> */}
       <CartItemList cartItems={cartItems} />
-      <ShopItemList shopItems={shopItems} setCartItems={setCartItems} />
+      <ShopItemList shopItems={shopItems} cartItems={cartItems} setCartItems={setCartItems} />
     </>
   );
 }
@@ -44,13 +44,13 @@ const sampleShopItems = [
 
 const sampleCartItems = [
   {
-    id: uuidv4(),
+    id: sampleShopItems[0].id,
     name: "Moon Lamp",
     price: "20",
     amount: 1,
   },
   {
-    id: uuidv4(),
+    id: sampleShopItems[1].id,
     name: "Death Stranding T-shirt",
     price: "10",
     amount: 1,

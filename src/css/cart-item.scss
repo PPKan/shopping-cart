@@ -3,6 +3,7 @@
   display: flex;
   align-self: stretch;
   align-items: center;
+  gap: 0.5em;
 
   .cart-item-name {
     flex: 4;
@@ -12,7 +13,11 @@
     flex: 1;
   }
 
-  input {
+  .btn--minus, .btn--plus {
+    height: 15px;
+  }
+
+  .btn--delete{
     height: 20px;
   }
 }

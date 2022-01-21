@@ -2,15 +2,27 @@ import React from "react";
 import Item from "./ShopItem";
 
 export default function ShopItemList(props) {
-  const { shopItems, setCartItems } = props;
+  const { shopItems, cartItems, setCartItems } = props;
 
   function handleSetCart(id) {
-    setCartItems((prevItem) => {
-      const found = shopItems.find((item) => {
-        if (item.id === id) return item;
-      });
-      return [...prevItem, found]
+    let makeUpdate = false;
+    const cartUpdate = cartItems.map((item) => {
+      if (item.id === id) {
+        makeUpdate = true;
+        return { ...item, amount: item.amount + 1 };
+      } else return item;
     });
+
+    if (makeUpdate) {
+      setCartItems(cartUpdate);
+      return;
+    }
+
+    const found = shopItems.find((item) => {
+      if (item.id === id) return item;
+    });
+
+    setCartItems((prevItem) => [...prevItem, { ...found, amount: 1 }]);
   }
 
   return (
