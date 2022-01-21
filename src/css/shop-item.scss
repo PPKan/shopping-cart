@@ -12,6 +12,7 @@
     "image image image image"
     "name name name price"
     ". button button . ";
+  box-shadow: 0.25em 0.25em 1em 0.1em hsl(0, 0%, 50%);
 
   .item-image {
     border-radius: 2rem;
@@ -45,4 +46,3 @@
     grid-area: button;
   }
 }
-

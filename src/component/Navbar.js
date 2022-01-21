@@ -1,10 +1,21 @@
-import React from 'react';
-import sidebar from '../images/sidebar.png'
+import React from "react";
+import shoppingCart from "../images/shoppingCart.png";
 
-export default function Navbar() {
+export default function Navbar(props) {
+  const { handleCartDisplay, handleAddDisplay } = props;
+
   return (
-  <nav>
-    <input className='menu-button' type="image" src={sidebar}></input>
-  </nav>
+    <nav>
+      <button className="btn btn--add-item" onClick={() => handleAddDisplay()}>
+        Add Item
+      </button>
+      <input
+        className="cart-button"
+        type="image"
+        src={shoppingCart}
+        onClick={() => handleCartDisplay()}
+        alt="shopping-cart button"
+      ></input>
+    </nav>
   );
 }

@@ -2,13 +2,22 @@ nav {
   height: 2.5rem;
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   background: aquamarine;
-  position: fixed;
+  gap: 1rem;
 
-  .menu-button {
-    margin-left: 1rem;
+  .cart-button {
+    margin-right: 1rem;
     height: 1.5rem;
+
+  }
+
+  .btn--add-item {
+    margin-left: auto;
+    // border: 1px solid green;
+    background: hsl(160, 100%, 30%);
+    height: 1.75rem;
+    color: white;
   }
 }
