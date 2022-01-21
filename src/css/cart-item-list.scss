@@ -1,0 +1,19 @@
+.cart-item-list {
+  height: 100vh;
+  width: 25%;
+  padding: 1rem;
+  background: #FFF;
+  float: right;
+  border-left: 1px solid darkgray;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  button {
+    width: 100px;
+    align-self: center;
+  }
+}
+

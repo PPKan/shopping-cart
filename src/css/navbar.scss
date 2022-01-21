@@ -1,0 +1,14 @@
+nav {
+  height: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: aquamarine;
+  position: fixed;
+
+  .menu-button {
+    margin-left: 1rem;
+    height: 1.5rem;
+  }
+}

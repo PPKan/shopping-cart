@@ -1,0 +1,16 @@
+@import "./reset.css";
+@import "./shop-item.scss";
+@import "./font.scss";
+@import "./shop-item-list.scss";
+@import "./navbar.scss";
+@import "./cart-item-list.scss";
+@import "./cart-item.scss";
+@import "./button.scss";
+
+html {
+  font-family: Noto Sans TC, "sans-serif"
+}
+
+body {
+  min-height: 100vh;
+}
