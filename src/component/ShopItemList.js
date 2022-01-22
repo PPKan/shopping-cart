@@ -20,6 +20,7 @@ export default function ShopItemList(props) {
 
     const found = shopItems.find((item) => {
       if (item.id === id) return item;
+      else return null;
     });
 
     setCartItems((prevItem) => [...prevItem, { ...found, amount: 1 }]);

@@ -7,6 +7,7 @@
 @import "./cart-item.scss";
 @import "./button.scss";
 @import "./add-item-edit.scss";
+@import "./media-query.scss";
 
 html {
   font-family: Noto Sans TC, "sans-serif"
@@ -14,4 +15,15 @@ html {
 
 body {
   min-height: 100vh;
+}
+
+header {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: hsl(160, 100%, 30%);
+  overflow: hidden;
 }

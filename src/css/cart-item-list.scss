@@ -1,6 +1,6 @@
 .cart-item-list {
-  height: 100%;
-  width: 25%;
+  min-height: 100vh;
+  width: 20%;
   padding: 1rem;
   background: #FFF;
   float: right;
@@ -13,5 +13,23 @@
   button {
     width: 100px;
     align-self: center;
+  }
+}
+
+
+.total-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 100%;
+  gap: 4rem;
+
+  .total-price-text {
+    justify-content: flex-start;
+  }
+  
+  .total-price-value {
+    justify-content: flex-end;
   }
 }
