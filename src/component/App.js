@@ -155,7 +155,7 @@ function App() {
       <footer>
         Powered by &nbsp;
         <a
-          href="https://github.com/PPKan/image-searcher"
+          href="https://github.com/PPKan/shopping-cart"
           target={"_blank"}
           rel="noreferrer"
         >
