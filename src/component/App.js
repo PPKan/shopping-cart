@@ -15,7 +15,7 @@ function App() {
   const [toggleCartList, setToggleCartList] = useState(false);
   const [toggleAddEdit, setToggleAddEdit] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [value, setValue] = useState(0); // integer state
+  const [, setValue] = useState(0); // integer state
 
   useEffect(() => {
     setToggleCartList(true);
@@ -136,7 +136,6 @@ function App() {
       <AddItemEdit toggleAddEdit={toggleAddEdit} setShopItems={setShopItems} />
       <CartItemList
         cartItems={cartItems}
-        setCartItems={setCartItems}
         toggleCartList={toggleCartList}
         handleCartAppend={handleCartAppend}
         handleCartDelete={handleCartDelete}

@@ -1,18 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CartItem from "./CartItem";
 
 export default function CartItemList(props) {
   const {
     cartItems,
-    setCartItems,
     toggleCartList,
     handleCartAppend,
     handleCartDelete,
     handleCartRemove,
     totalPrice,
   } = props;
-
-  const [, setState] = useState({ something: "changed" });
 
   if (toggleCartList) {
     return (

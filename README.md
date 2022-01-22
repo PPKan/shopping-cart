@@ -1,3 +1,18 @@
+# Shopping Cart Web App
+
+Hi, this is Peter.
+Welcome to my shopping cite project.
+
+Feature:
+- Made by React
+- Use **NO** UI libraries like Material UI, only SCSS and REACT!
+- Interact with browser local storeage. (server support coming soon!)
+- Mobile Support!
+- *Animation and more styling features coming soon!*
+
+[Welcome to have a play here!]()
+
+## Image Credit
 <a href="https://www.flaticon.com/free-icons/open-menu" title="open menu icons">Open menu icons created by Pixel perfect - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/cancel" title="cancel icons">Cancel icons created by hqrloveq - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/plus" title="plus icons">Plus icons created by Freepik - Flaticon</a>
