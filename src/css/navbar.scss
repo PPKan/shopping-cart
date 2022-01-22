@@ -4,8 +4,10 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background: aquamarine;
+  background: hsla(160, 100%, 75%, 0.3);
   gap: 1rem;
+  position: fixed;
+  top: 0;
 
   .cart-button {
     margin-right: 1rem;
