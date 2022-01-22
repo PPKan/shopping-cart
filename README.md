@@ -10,7 +10,7 @@ Feature:
 - Mobile Support!
 - *Animation and more styling features coming soon!*
 
-[Welcome to have a play here!]()
+[Welcome to have a play here!](https://nervous-wright-29777b.netlify.app)
 
 ## Image Credit
 <a href="https://www.flaticon.com/free-icons/open-menu" title="open menu icons">Open menu icons created by Pixel perfect - Flaticon</a>
