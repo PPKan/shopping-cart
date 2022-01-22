@@ -53,7 +53,7 @@ function App() {
   return (
     <>
       <Navbar handleCartDisplay={handleCartDisplay} handleAddDisplay={handleAddDisplay} />
-        <AddItemEdit toggleAddEdit={toggleAddEdit}/>
+        <AddItemEdit toggleAddEdit={toggleAddEdit} setShopItems={setShopItems}/>
         <CartItemList
           cartItems={cartItems}
           setCartItems={setCartItems}
