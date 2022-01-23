@@ -13,6 +13,11 @@
   button {
     width: 100px;
     align-self: center;
+    
+    .link {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 }
 

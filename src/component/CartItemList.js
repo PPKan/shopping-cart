@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CartItem from "./CartItem";
 
 export default function CartItemList(props) {
@@ -10,6 +11,8 @@ export default function CartItemList(props) {
     handleCartRemove,
     totalPrice,
   } = props;
+  
+  const checkoutState = [cartItems, totalPrice]
 
   if (toggleCartList) {
     return (
@@ -34,11 +37,8 @@ export default function CartItemList(props) {
             <div className="total-price-text">Total Price:</div>
             <div className="total-price-value">{totalPrice}$</div>
           </div>
-          <button
-            className="btn btn--checkout"
-            // onClick={() => handleUpdateTotalPrice(cartItems)}
-          >
-            Check Out
+          <button className="btn btn--checkout">
+            <Link to="/checkout" className="link" state={checkoutState}>Check Out</Link>
           </button>
         </div>
       </>

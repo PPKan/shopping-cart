@@ -1,0 +1,86 @@
+@import "./reset.css";
+
+.checkout-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout-container {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  background: white;
+
+  .title {
+    align-self: center;
+  }
+
+  .cart {
+    margin-left: 2rem;
+  }
+
+  .checkout-total-price {
+    align-self: flex-end;
+    margin-right: 3.5rem;
+  }
+}
+
+.checkout-items-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  justify-content:center;
+
+  .name {
+    width: 400px;
+  }
+
+  .amount {
+    width: 100px;
+  }
+
+
+  img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 1rem;
+  }
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  button {
+    align-self: center;
+    width: 100px;
+    flex-shrink: 0;
+  }
+}
+
+.checkout-form-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 3rem;
+  row-gap: 1rem;
+  width: 80%;
+  align-self: center;
+  font-weight: bold;
+
+}
+
+.payment-info {
+  align-self: center;
+}
+
+@media (max-width: 800px) {
+  .checkout-container {
+    width: 100vw;
+  }
+}

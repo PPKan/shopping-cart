@@ -128,6 +128,8 @@ function App() {
     setTotalPrice(total);
   }
 
+
+
   return (
     <>
       <Navbar
