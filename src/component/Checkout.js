@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import CartItem from "./CartItem";
 import "../css/checkout.scss";
 
 export default function Checkout(props) {
