@@ -9,6 +9,11 @@ import Navbar from "./Navbar";
 import CartItemList from "./CartItemList";
 import AddItemEdit from "./AddItemEdit";
 import githubIcon from "../images/gitHubMark.png";
+import capo from "../images/capo.jpg"
+import electricGuitar from "../images/electricGuitar.jpg"
+import amp from "../images/amp.jpg"
+import xbox from "../images/xbox.png"
+import ps5 from "../images/ps5.jpg"
 
 function App() {
   const [shopItems, setShopItems] = useState(sampleShopItems);
@@ -186,6 +191,36 @@ const sampleShopItems = [
     name: "Fridge",
     price: 2000,
     image: fridge,
+  },
+  {
+    id: uuidv4(),
+    name: "X-Box",
+    price: 299,
+    image: xbox,
+  },
+  {
+    id: uuidv4(),
+    name: "PS5",
+    price: 299,
+    image: ps5,
+  },
+  {
+    id: uuidv4(),
+    name: "Capo",
+    price: 30,
+    image: capo,
+  },
+  {
+    id: uuidv4(),
+    name: "Electric Guitar",
+    price: 1500,
+    image: electricGuitar,
+  },
+  {
+    id: uuidv4(),
+    name: "Amp",
+    price: 699,
+    image: amp,
   },
 ];
 
