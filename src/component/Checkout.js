@@ -1,6 +1,9 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import "../css/checkout.scss";
+import Footer from "./Footer";
+import PaymentInfo from "./PaymentInfo";
+
 
 export default function Checkout(props) {
   const location = useLocation();
@@ -29,25 +32,9 @@ export default function Checkout(props) {
           <h3 className="checkout-total-price">
             Total Price:&nbsp; {totalPrice}$
           </h3>
-          <h2 className="payment-info">Payment Information</h2>
-          <form className="checkout-form">
-            <div className="checkout-form-container">
-              <label htmlFor="Name">Name</label>
-              <input required type="text" name="Name"></input>
-              <label htmlFor="email">Email Address</label>
-              <input required type="email" name="email"></input>
-              <label htmlFor="card">Credit Card</label>
-              <input required type="text" name="card" pattern="[0-9]*" inputmode="numeric" placeholder="0001 0001 0001 0001"></input>
-              <label htmlFor="date">Expire Date</label>
-              <input required type="text" name="date" placeholder="01/2025"></input>
-              <label htmlFor="security">Security Code</label>
-              <input required type="text" name="security" min="1" max="999" placeholder="001"></input>
-            </div>
-            <button className="btn" type="submit">
-              Purchase
-            </button>
-          </form>
+          <PaymentInfo />
         </div>
+        <Footer />
       </div>
     </>
   );

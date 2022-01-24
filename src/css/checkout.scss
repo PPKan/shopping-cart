@@ -1,4 +1,5 @@
 @import "./reset.css";
+@import "./payment-info.scss";
 
 .checkout-body {
   display: flex;
@@ -11,7 +12,6 @@
   width: 800px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 2rem;
   background: white;
 
@@ -35,7 +35,6 @@
   gap: 2rem;
   font-size: 1.25rem;
   font-weight: 600;
-  justify-content:center;
 
   .name {
     width: 400px;
@@ -53,34 +52,3 @@
   }
 }
 
-.checkout-form {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  button {
-    align-self: center;
-    width: 100px;
-    flex-shrink: 0;
-  }
-}
-
-.checkout-form-container {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 3rem;
-  row-gap: 1rem;
-  width: 80%;
-  align-self: center;
-  font-weight: bold;
-
-}
-
-.payment-info {
-  align-self: center;
-}
-
-@media (max-width: 800px) {
-  .checkout-container {
-    width: 100vw;
-  }
-}

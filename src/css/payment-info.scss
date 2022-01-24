@@ -1,0 +1,34 @@
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  button {
+    align-self: center;
+    width: 100px;
+    flex-shrink: 0;
+  }
+  .link {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.payment-form-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 3rem;
+  row-gap: 1rem;
+  width: 80%;
+  align-self: center;
+  font-weight: bold;
+}
+
+.payment-info {
+  align-self: center;
+}
+
+@media (max-width: 800px) {
+  .payment-form-container {
+    width: 100vw;
+  }
+}

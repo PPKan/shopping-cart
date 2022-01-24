@@ -8,12 +8,12 @@ import "../css/app.scss";
 import Navbar from "./Navbar";
 import CartItemList from "./CartItemList";
 import AddItemEdit from "./AddItemEdit";
-import githubIcon from "../images/gitHubMark.png";
 import capo from "../images/capo.jpg"
 import electricGuitar from "../images/electricGuitar.jpg"
 import amp from "../images/amp.jpg"
 import xbox from "../images/xbox.png"
 import ps5 from "../images/ps5.jpg"
+import Footer from "./Footer";
 
 function App() {
   const [shopItems, setShopItems] = useState(sampleShopItems);
@@ -159,16 +159,7 @@ function App() {
         cartItems={cartItems}
         setCartItems={setCartItems}
       />
-      <footer>
-        Powered by &nbsp;
-        <a
-          href="https://github.com/PPKan/shopping-cart"
-          target={"_blank"}
-          rel="noreferrer"
-        >
-          <img src={githubIcon} alt="github icon" /> PPKan
-        </a>
-      </footer>
+      <Footer />
     </>
   );
 }
