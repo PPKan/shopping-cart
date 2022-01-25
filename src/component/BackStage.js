@@ -9,7 +9,6 @@ import Footer from "./Footer";
 export default function BackStage() {
   const [shopItems, setShopItems] = useState([]);
   const [editItemId, setEditItemId] = useState();
-  const [removeItemId, setRemoveItemId] = useState();
   const editItem = shopItems.find((item) => {
     return item.id === editItemId;
   });
