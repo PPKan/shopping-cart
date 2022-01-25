@@ -1,7 +1,7 @@
 # Shopping Cart Web App
 
 Hi, this is Peter.
-Welcome to my shopping cite project.
+Welcome to my shopping cart project.
 
 Feature:
 - Made by React
