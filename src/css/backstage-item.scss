@@ -1,0 +1,55 @@
+@import "./add-item-edit.scss";
+
+.backstage-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: 
+    "list edit";
+  place-items:center;
+}
+
+.backstage-item-list {
+  grid-area: list;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.backstage-item-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  .name {
+    width: 400px;
+  }
+
+  .amount {
+    width: 100px;
+  }
+
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 1rem;
+  }
+
+  input {
+    width: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .add-item-edit {
+    place-self: center;
+  }
+  .backstage-container {
+    grid-template-areas: 
+    "edit"
+    "list";
+  }
+}

@@ -4,6 +4,7 @@ import Checkout from "./component/Checkout";
 import App from "./component/App";
 import ThankYou from "./component/ThankYou";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import BackStage from "./component/BackStage";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,6 +13,7 @@ ReactDOM.render(
         <Route path="/" element={<App />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="thankyou" element={<ThankYou />} />
+        <Route path="backstage" element={<BackStage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

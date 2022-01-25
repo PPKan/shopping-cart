@@ -1,66 +1,53 @@
-import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+import React from "react";
+
 
 export default function AddItemEdit(props) {
-  const { toggleAddEdit, setShopItems } = props;
-  const id = uuidv4();
-  const [name, setName] = useState();
-  const [price, setPrice] = useState();
-  const [image, setImage] = useState();
+  const { editItem, handleItemChange, setEditItemId } = props;
 
-  function handleAddShopItems() {
-    setShopItems((prevItems) => {
-      return [...prevItems, { id: id, name: name, price: price, image: image }];
-    });
-    setName(null);
-    setPrice(null);
-    setImage(null);
+  function handleChange(changes) {
+    handleItemChange(editItem.id, { ...editItem, ...changes });
   }
 
-  if (toggleAddEdit) {
-    return (
-      <form
-        className="add-item-edit"
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleAddShopItems();
-        }}
-      >
-        <h3>Add Item</h3>
-        <div className="form-container">
-          <label htmlFor="name">Item Name</label>
-          <input
-            required
-            type="text"
-            name="name"
-            value={name || ""}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <label htmlFor="name">Item Price</label>
-          <input
-            required
-            type="number"
-            name="name"
-            value={price || ""}
-            onChange={(e) => setPrice(e.target.value)}
-            min="0"
-          />
-          <label htmlFor="image">Item Image</label>
-          <input
-            required
-            placeholder="imgur.jpg"
-            type="url"
-            name="image"
-            value={image || ""}
-            onChange={(e) => setImage(e.target.value)}
-          />
-        </div>
-        <button className="btn" type="submit">
-          Submit
-        </button>
-      </form>
-    );
-  } else {
-    return null;
-  }
+  return (
+    <form
+      className="add-item-edit"
+      onSubmit={(e) => {
+        e.preventDefault();
+        setEditItemId();
+      }}
+    >
+      <h3>Item</h3>
+      <div className="form-container">
+        <label htmlFor="name">Item Name</label>
+        <input
+          required
+          type="text"
+          name="name"
+          value={editItem.name || ""}
+          onChange={(e) => handleChange({ name: e.target.value })}
+        />
+        <label htmlFor="price">Price</label>
+        <input
+          required
+          type="number"
+          name="price"
+          value={editItem.price || ""}
+          onChange={(e) => handleChange({price: e.target.value})}
+          min="0"
+        />
+        {/* <label htmlFor="image">Item Image</label>
+        <input
+          required
+          placeholder="imgur.jpg"
+          type="url"
+          name="image"
+          value={editItem.image || ""}
+          onChange={(e) => handleChange(e.target.value)}
+        /> */}
+      </div>
+      <button className="btn" type="submit">
+        Submit
+      </button>
+    </form>
+  );
 }

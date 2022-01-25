@@ -7,7 +7,6 @@ import dsTShirt from "../images/dsTShirt.jpg";
 import "../css/app.scss";
 import Navbar from "./Navbar";
 import CartItemList from "./CartItemList";
-import AddItemEdit from "./AddItemEdit";
 import capo from "../images/capo.jpg"
 import electricGuitar from "../images/electricGuitar.jpg"
 import amp from "../images/amp.jpg"
@@ -22,7 +21,7 @@ function App() {
   const [toggleAddEdit, setToggleAddEdit] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
   const [, setValue] = useState(0); // integer state
-
+  const stage = "front";
   useEffect(() => {
     setToggleCartList(true);
     handleUpdateTotalPrice(cartItems);
@@ -53,7 +52,7 @@ function App() {
     localStorage.setItem(LOCAL_STORAGE_KEY_LIST, JSON.stringify(shopItems));
   }, [shopItems]);
 
-  function handleCartDisplay(toggle) {
+  function handleCartDisplay() {
     if (toggleCartList) {
       setToggleCartList(false);
     } else {
@@ -138,10 +137,11 @@ function App() {
   return (
     <>
       <Navbar
-        handleCartDisplay={handleCartDisplay}
+        stage={stage}
         handleAddDisplay={handleAddDisplay}
+        handleCartDisplay={handleCartDisplay}
       />
-      <AddItemEdit toggleAddEdit={toggleAddEdit} setShopItems={setShopItems} />
+      
       <CartItemList
         cartItems={cartItems}
         toggleCartList={toggleCartList}

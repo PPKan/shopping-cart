@@ -18,3 +18,4 @@ Feature:
 <a href="https://www.flaticon.com/free-icons/plus" title="plus icons">Plus icons created by Freepik - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/minus" title="minus icons">Minus icons created by Freepik - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/smart-cart" title="smart cart icons">Smart cart icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/edit" title="edit icons">Edit icons created by herikus - Flaticon</a>

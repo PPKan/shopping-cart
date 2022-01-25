@@ -2,16 +2,17 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import "../css/checkout.scss";
 import Footer from "./Footer";
+import Navbar from "./Navbar";
 import PaymentInfo from "./PaymentInfo";
-
 
 export default function Checkout(props) {
   const location = useLocation();
   const cartItems = location.state[0];
   const totalPrice = location.state[1];
-
+  const stage = "checkout";
   return (
     <>
+      <Navbar stage={stage} />
       <div className="checkout-body">
         <div className="checkout-container">
           <h1 className="title">Here to finish your purchase!</h1>
