@@ -7,11 +7,11 @@ import dsTShirt from "../images/dsTShirt.jpg";
 import "../css/app.scss";
 import Navbar from "./Navbar";
 import CartItemList from "./CartItemList";
-import capo from "../images/capo.jpg"
-import electricGuitar from "../images/electricGuitar.jpg"
-import amp from "../images/amp.jpg"
-import xbox from "../images/xbox.png"
-import ps5 from "../images/ps5.jpg"
+import capo from "../images/capo.jpg";
+import electricGuitar from "../images/electricGuitar.jpg";
+import amp from "../images/amp.jpg";
+import xbox from "../images/xbox.png";
+import ps5 from "../images/ps5.jpg";
 import Footer from "./Footer";
 
 function App() {
@@ -132,8 +132,6 @@ function App() {
     setTotalPrice(total);
   }
 
-
-
   return (
     <>
       <Navbar
@@ -141,24 +139,25 @@ function App() {
         handleAddDisplay={handleAddDisplay}
         handleCartDisplay={handleCartDisplay}
       />
-      
-      <CartItemList
-        cartItems={cartItems}
-        toggleCartList={toggleCartList}
-        handleCartAppend={handleCartAppend}
-        handleCartDelete={handleCartDelete}
-        handleCartRemove={handleCartRemove}
-        totalPrice={totalPrice}
-      />
-      <header>
+      <header className="head-page-title">
         <h1>PP's Shopping Center</h1>
         <h4>Welcome to sell or buy items here!</h4>
       </header>
-      <ShopItemList
-        shopItems={shopItems}
-        cartItems={cartItems}
-        setCartItems={setCartItems}
-      />
+      <div className="main-content">
+        <ShopItemList
+          shopItems={shopItems}
+          cartItems={cartItems}
+          setCartItems={setCartItems}
+        />
+        <CartItemList
+          cartItems={cartItems}
+          toggleCartList={toggleCartList}
+          handleCartAppend={handleCartAppend}
+          handleCartDelete={handleCartDelete}
+          handleCartRemove={handleCartRemove}
+          totalPrice={totalPrice}
+        />
+      </div>
       <Footer />
     </>
   );

@@ -1,6 +1,5 @@
 .cart-item-list {
-  min-height: 80vh;
-  width: 20%;
+  grid-area: cart-item-list;
   padding: 1rem;
   background: #FFF;
   float: right;

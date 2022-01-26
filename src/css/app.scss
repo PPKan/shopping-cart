@@ -15,14 +15,23 @@ html {
 }
 
 body {
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
   min-height: 100vh;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
-header {
-  // margin: 1rem;
-  // margin-top: 3rem;
+.main-content {
+  grid-area: main-content;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:   
+  "main-content cart-item-list"
+}
+
+
+
+.head-page-title {
+  background-color: #FFF;
   display: flex;
   flex-direction: column;
   justify-content: center;
