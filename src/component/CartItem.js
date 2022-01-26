@@ -18,7 +18,7 @@ export default function CartItem(props) {
     <>
       <ul className="cart-item">
         <li className="cart-item-name">{name}</li>
-        <li className="cart-item-price">{price}$</li>
+        <li className="cart-item-price">{price * amount}$</li>
         <input
           type="image"
           className="btn--minus"
