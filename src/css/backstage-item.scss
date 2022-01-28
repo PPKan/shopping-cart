@@ -1,6 +1,8 @@
 @import "./add-item-edit.scss";
 
 .backstage-container {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-areas: 
@@ -12,6 +14,8 @@
   grid-area: list;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -21,7 +25,9 @@
   gap: 2rem;
   font-size: 1.25rem;
   font-weight: 600;
-
+  padding: 1rem;
+  // border: 1px solid navy;
+  box-shadow: 0 0 1px 2px navy;
   .name {
     width: 400px;
   }

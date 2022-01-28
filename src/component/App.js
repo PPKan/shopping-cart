@@ -20,7 +20,7 @@ function App() {
   const [toggleCartList, setToggleCartList] = useState(false);
   const [toggleAddEdit, setToggleAddEdit] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [, setValue] = useState(0); // integer state
+  const [value, setValue] = useState(0); // integer state
   const stage = "front";
   useEffect(() => {
     setToggleCartList(true);
@@ -41,7 +41,7 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY_CART, JSON.stringify(cartItems));
-  }, [cartItems]);
+  }, [cartItems, value]);
 
   useEffect(() => {
     const shopItemsJSON = localStorage.getItem(LOCAL_STORAGE_KEY_LIST);
@@ -145,14 +145,16 @@ function App() {
           cartItems={cartItems}
           setCartItems={setCartItems}
         />
-        <CartItemList
-          cartItems={cartItems}
-          toggleCartList={toggleCartList}
-          handleCartAppend={handleCartAppend}
-          handleCartDelete={handleCartDelete}
-          handleCartRemove={handleCartRemove}
-          totalPrice={totalPrice}
-        />
+        {cartItems.length !== 0 && (
+          <CartItemList
+            cartItems={cartItems}
+            toggleCartList={toggleCartList}
+            handleCartAppend={handleCartAppend}
+            handleCartDelete={handleCartDelete}
+            handleCartRemove={handleCartRemove}
+            totalPrice={totalPrice}
+          />
+        )}{" "}
       </div>
       <Footer />
     </>

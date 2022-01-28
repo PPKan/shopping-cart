@@ -18,8 +18,8 @@ export default function Checkout(props) {
           <h1 className="title">Here to finish your purchase!</h1>
           {cartItems.map((item) => {
             return (
-              <>
-                <div className="checkout-items-list" key={item.id}>
+              <div key={item}>
+                <div className="checkout-items-list">
                   <div>
                     <img src={item.image} alt="" />
                   </div>
@@ -27,7 +27,7 @@ export default function Checkout(props) {
                   <div className="amount">{item.amount} piece(s)</div>
                   <div className="price">{item.amount * item.price}$</div>
                 </div>
-              </>
+              </div>
             );
           })}
           <h3 className="checkout-total-price">
@@ -35,8 +35,8 @@ export default function Checkout(props) {
           </h3>
           <PaymentInfo />
         </div>
-        <Footer />
       </div>
+        <Footer />
     </>
   );
 }

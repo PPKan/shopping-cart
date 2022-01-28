@@ -35,8 +35,8 @@ export default function BackStage() {
   function handleItemRemove(id) {
     const newItems = [...shopItems];
     const index = newItems.findIndex((i) => i.id === id);
-    newItems.splice(index, 1)
-    setShopItems(newItems)
+    newItems.splice(index, 1);
+    setShopItems(newItems);
   }
 
   function handleEditItemId(id) {
@@ -44,39 +44,47 @@ export default function BackStage() {
   }
 
   function addNewItem() {
-    const newItem =   {
+    const newItem = {
       id: uuidv4(),
       name: "",
       price: 1,
       image: null,
-    }
+    };
 
     const newItems = shopItems;
-    newItems.push(newItem)
-    console.log(newItems)
+    newItems.push(newItem);
+    console.log(newItems);
     setShopItems(newItems);
     setEditItemId(newItem.id);
   }
 
   return (
     <>
-      <div className="backstage-container">
-        {editItem && (
-          <AddItemEdit
-            editItem={editItem}
-            handleItemChange={handleItemChange}
-            setEditItemId={setEditItemId}
-          />
-        )}
-        <Navbar stage={stage} addNewItem={addNewItem}  />
-        <div className="backstage-item-list">
-          {shopItems.map((item) => {
-            return (
-              <BackStageItem key={item.id} item={item} handleEditItemId={handleEditItemId} handleItemRemove={handleItemRemove} />
-            );
-          })}
+      <Navbar />
+        <div className="backstage-container">
+          {editItem && (
+            <AddItemEdit
+              editItem={editItem}
+              handleItemChange={handleItemChange}
+              setEditItemId={setEditItemId}
+            />
+          )}
+          <div className="backstage-item-list">
+            {shopItems.map((item) => {
+              return (
+                <BackStageItem
+                  key={item.id}
+                  item={item}
+                  handleEditItemId={handleEditItemId}
+                  handleItemRemove={handleItemRemove}
+                />
+              );
+            })}
+            <button className="btn" onClick={() => addNewItem()}>
+              ADD ITEM
+            </button>
+          </div>
         </div>
-      </div>
       <Footer />
     </>
   );
