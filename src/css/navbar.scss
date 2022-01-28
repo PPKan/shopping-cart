@@ -4,10 +4,10 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $navyblue;
+  background: rgba(5, 68, 94, 0.8);
   position: fixed;
   top: 0;
-  opacity: 0.8;
+  // opacity: 0.8;
 
   .navbar-container {
     display: flex;
@@ -32,7 +32,6 @@ nav {
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
       transition: -webkit-transform 150ms ease-in-out;
-      transition: transform 150ms ease-in-out;
       transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
     }
     
