@@ -27,9 +27,14 @@ $babyblue: #d4f1f4;
     font-weight: bold;
   }
 
-  button {
+  a {
     position: absolute;
+    text-decoration: none;
+    color: inherit;
     margin-bottom: -10rem;
+  }
+
+  button {
     border: 5px solid $babyblue;
     background: $navyblue;
     color: $babyblue;
@@ -40,10 +45,6 @@ $babyblue: #d4f1f4;
     cursor: pointer;
     transition: 200ms ease-in;
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
   }
 
   button:hover {

@@ -8,7 +8,7 @@ export default function Homepage() {
       <Navbar />
       <div className="home-intro">
         <div>Peter Kan Official Merch</div>
-        <button><a href="/shop">START SHOPPING</a></button>
+        <a href="/shop"><button>START SHOPPING</button></a>
       </div>
     </div>
   );
