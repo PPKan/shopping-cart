@@ -139,10 +139,6 @@ function App() {
         handleAddDisplay={handleAddDisplay}
         handleCartDisplay={handleCartDisplay}
       />
-      <header className="head-page-title">
-        <h1>PP's Shopping Center</h1>
-        <h4>Welcome to sell or buy items here!</h4>
-      </header>
       <div className="main-content">
         <ShopItemList
           shopItems={shopItems}

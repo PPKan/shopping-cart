@@ -1,13 +1,12 @@
 .cart-item-list {
   grid-area: cart-item-list;
   padding: 1rem;
-  background: #FFF;
   float: right;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  background-color: hsla(174, 69%, 68%, 0.02);
 
   button {
     width: 100px;

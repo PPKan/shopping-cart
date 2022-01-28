@@ -1,12 +1,12 @@
 .btn {
   border-radius: 0.5rem;
-  background: aquamarine;
+  background: $navyblue;
   border: 0;
   height: 35px;
   cursor: pointer;
-  color: hsl(160, 100%, 20%)
+  color: $babyblue;
 }
 
 .btn:hover {
-  background: hsl(160, 100%, 60%);
+  background: $bluegrotto;
 }

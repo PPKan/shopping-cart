@@ -25,18 +25,10 @@ body {
 
 .main-content {
   grid-area: main-content;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  background-color: hsla(174, 69%, 68%, 0.2);
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-areas: "main-content cart-item-list";
-}
-
-.head-page-title {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  color: hsl(160, 100%, 30%);
-  overflow: hidden;
 }
