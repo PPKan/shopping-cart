@@ -36,7 +36,11 @@
     ]
   },
   "devDependencies": {
+    "dotenv": "^14.3.2",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
     "react-router-dom": "^6.2.1",
-    "sass": "^1.49.0"
+    "sass": "^1.49.0",
+    "stripe": "^8.200.0"
   }
 }

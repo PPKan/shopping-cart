@@ -116,8 +116,8 @@ function App() {
 
   return (
     <>
-      <Navbar />
       <div className="main-content">
+        <Navbar />
         <ShopItemList
           shopItems={shopItems}
           cartItems={cartItems}
@@ -133,8 +133,8 @@ function App() {
             totalPrice={totalPrice}
           />
         )}{" "}
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }

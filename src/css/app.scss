@@ -24,11 +24,13 @@ body {
 }
 
 .main-content {
+  min-height: 100vh;
   grid-area: main-content;
   padding-top: 4rem;
-  padding-bottom: 1rem;
   background-color: hsla(174, 69%, 68%, 0.2);
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-areas: "main-content cart-item-list";
+  grid-template-areas: 
+  "main-content cart-item-list"
+  "footer footer";
 }
