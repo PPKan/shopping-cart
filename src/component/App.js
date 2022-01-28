@@ -18,10 +18,8 @@ function App() {
   const [shopItems, setShopItems] = useState(sampleShopItems);
   const [cartItems, setCartItems] = useState([]);
   const [toggleCartList, setToggleCartList] = useState(false);
-  const [toggleAddEdit, setToggleAddEdit] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
   const [value, setValue] = useState(0); // integer state
-  const stage = "front";
   useEffect(() => {
     setToggleCartList(true);
     handleUpdateTotalPrice(cartItems);
@@ -51,22 +49,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY_LIST, JSON.stringify(shopItems));
   }, [shopItems]);
-
-  function handleCartDisplay() {
-    if (toggleCartList) {
-      setToggleCartList(false);
-    } else {
-      setToggleCartList(true);
-    }
-  }
-
-  function handleAddDisplay(toggle) {
-    if (toggleAddEdit) {
-      setToggleAddEdit(false);
-    } else {
-      setToggleAddEdit(true);
-    }
-  }
 
   function handleCartDelete(id) {
     const found = cartItems.find((item) => {
@@ -134,11 +116,7 @@ function App() {
 
   return (
     <>
-      <Navbar
-        stage={stage}
-        handleAddDisplay={handleAddDisplay}
-        handleCartDisplay={handleCartDisplay}
-      />
+      <Navbar />
       <div className="main-content">
         <ShopItemList
           shopItems={shopItems}

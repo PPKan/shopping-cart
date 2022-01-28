@@ -12,7 +12,6 @@ export default function BackStage() {
   const editItem = shopItems.find((item) => {
     return item.id === editItemId;
   });
-  const stage = "back";
 
   const LOCAL_STORAGE_KEY_LIST = "shoppingList.list";
 

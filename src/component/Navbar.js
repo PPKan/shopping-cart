@@ -1,9 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import shoppingCart from "../images/shoppingCart.png";
 
-export default function Navbar(props) {
-  const { stage, handleCartDisplay, addNewItem } = props;
+export default function Navbar() {
 
   return (
     <nav className="navbar">
