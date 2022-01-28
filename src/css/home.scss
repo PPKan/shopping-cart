@@ -1,0 +1,52 @@
+$navyblue: #05445e;
+$bluegrotto: #189ab4;
+$bluegreen: #75e6da;
+$babyblue: #d4f1f4;
+
+.home {
+  margin: 0;
+  max-height: 100vh;
+}
+
+
+.home-intro {
+  padding: 50vh 0;
+  background: #777 url(../images/wave.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: white;
+  text-align: center;
+  display: grid;
+  place-items: center;
+
+  div {
+    position: absolute;
+    margin-top: -8rem;
+    color: $babyblue;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  button {
+    position: absolute;
+    margin-bottom: -10rem;
+    border: 5px solid $babyblue;
+    background: $navyblue;
+    color: $babyblue;
+    height: 4rem;
+    width: 12rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 200ms ease-in;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  button:hover {
+    background: $bluegrotto;
+  }
+}

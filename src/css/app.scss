@@ -1,3 +1,8 @@
+$navyblue: #05445e;
+$bluegrotto: #189ab4;
+$bluegreen: #75e6da;
+$babyblue: #d4f1f4;
+
 @import "./reset.css";
 @import "./shop-item.scss";
 @import "./font.scss";
@@ -11,27 +16,22 @@
 @import "./footer.scss";
 
 html {
-  font-family: Noto Sans TC, "sans-serif"
+  font-family: Noto Sans TC, "sans-serif";
 }
 
 body {
   min-height: 100vh;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 
 .main-content {
   grid-area: main-content;
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-areas:   
-  "main-content cart-item-list"
+  grid-template-areas: "main-content cart-item-list";
 }
 
-
-
 .head-page-title {
-  background-color: #FFF;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,4 +40,3 @@ body {
   color: hsl(160, 100%, 30%);
   overflow: hidden;
 }
-

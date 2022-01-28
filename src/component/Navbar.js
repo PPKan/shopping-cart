@@ -6,38 +6,20 @@ export default function Navbar(props) {
   const { stage, handleCartDisplay, addNewItem } = props;
 
   return (
-    <nav>
-      {stage === "back" ? (
-        <>
-          <button className="btn" onClick={() => addNewItem()}>
-            Add Items
-          </button>
-          <Link to="/">
-            <button className="btn">Front-stage</button>
-          </Link>
-        </>
-      ) : null}
-      {stage === "front" ? (
-        <>
-          <Link to="/backstage">
-            <button className="btn">Back-stage</button>
-          </Link>
-          <input
-            className="cart-button"
-            type="image"
-            src={shoppingCart}
-            onClick={() => handleCartDisplay()}
-            alt="shopping-cart button"
-          ></input>
-        </>
-      ) : null}
-      {stage === "checkout" ? (
-        <>
-          <Link to="/">
-            <button className="btn">Back to Front</button>
-          </Link>
-        </>
-      ) : null}
+    <nav className="navbar">
+      <ul className="navbar-container">
+        <li>
+          <a className="nav__link" href="/">Home</a>
+        </li>
+        <label>|</label>
+        <li>
+          <a className="nav__link" href="/shop">Shop</a>
+        </li>
+        <label>|</label>
+        <li>
+          <a className="nav__link" href="/backstage">Backstage</a>
+        </li>
+      </ul>
     </nav>
   );
 }

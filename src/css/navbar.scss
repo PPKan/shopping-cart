@@ -1,13 +1,51 @@
 nav {
-  height: 2.5rem;
+  height: 4rem;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  background: hsla(160, 100%, 75%, 0.3);
-  gap: 1rem;
+  background: $navyblue;
   position: fixed;
   top: 0;
+
+  .navbar-container {
+    display: flex;
+    gap: 3rem;
+    font-size: 1.5rem;
+    color: $babyblue;
+    font-weight: bold;
+
+    li {
+      list-style-type: none;
+      position: relative;
+    }
+
+   .nav__link::after {
+      content: "";
+      position: absolute;
+      bottom: -0.125rem;
+      left: 0.3rem;
+      right: 0.3rem;
+      height: 3px;
+      background: $babyblue;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      transition: -webkit-transform 150ms ease-in-out;
+      transition: transform 150ms ease-in-out;
+      transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+    }
+    
+    .nav__link:hover::after {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
 
   .cart-button {
     margin-right: 1rem;
