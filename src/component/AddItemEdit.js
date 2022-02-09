@@ -1,11 +1,18 @@
 import React from "react";
 
-
 export default function AddItemEdit(props) {
   const { editItem, handleItemChange, setEditItemId } = props;
 
   function handleChange(changes) {
     handleItemChange(editItem.id, { ...editItem, ...changes });
+  }
+
+  function handleFile(changes, callback) {
+    const reader = new FileReader();
+    reader.readAsDataURL(changes);
+    reader.onload = () => {
+      callback({ image: reader.result });
+    };
   }
 
   return (
@@ -32,18 +39,17 @@ export default function AddItemEdit(props) {
           type="number"
           name="price"
           value={editItem.price || ""}
-          onChange={(e) => handleChange({price: e.target.value})}
+          onChange={(e) => handleChange({ price: e.target.value })}
           min="0"
         />
-        {/* <label htmlFor="image">Item Image</label>
+        <label htmlFor="image">Image</label>
         <input
-          required
-          placeholder="imgur.jpg"
-          type="url"
-          name="image"
-          value={editItem.image || ""}
-          onChange={(e) => handleChange(e.target.value)}
-        /> */}
+          accept="image/png, image/jpeg"
+          type="file"
+          onChange={(e) => {
+            handleFile(e.target.files[0], handleChange);
+          }}
+        />
       </div>
       <button className="btn" type="submit">
         Submit
